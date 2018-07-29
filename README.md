@@ -1,28 +1,40 @@
-# AngularElementsTest
+# Angular Elements Test Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+This project is indented to try out Angular Elements.  
+It uses standard Angular 6 setup with some of the [beeman](https://github.com/beeman/angular-elements-chat-widget)'s additions:
+```text
+src/app/element.module.ts   Module with the component to be used as Angular Element. Imported by App Module
+src/main.element.ts         Bootstraps the UserListModule
+src/polyfills.element.ts    Polyfills for the UserListModule
+build-elements.js           Script to generate the exported file and demo project
+```
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Development server
 
-## Code scaffolding
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Build
 
-## Build
+Run `npm run build:elements` to build the Custom Element. Go to `dist/elements-build` and open `index.html` in browser. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Useful links and resources
 
-## Running unit tests
+* https://angular.io/guide/elements#example-a-popup-service
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* https://nitayneeman.com/posts/a-practical-guide-to-angular-elements/
 
-## Running end-to-end tests
+* https://medium.com/@tomsu/building-web-components-with-angular-elements-746cd2a38d5b
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* https://www.youtube.com/watch?v=hb00ZR4sipw
 
-## Further help
+* https://github.com/beeman/angular-elements-chat-widget
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* https://medium.com/vincent-ogloblinsky/export-angular-components-as-custom-elements-with-angular-elements-a2a0bfcd7f8a
+
+* https://docs.google.com/presentation/d/1jiXHYwfe1iSUiVLdKLFhSPRHLI_FmIvrI60QTpP6KLk/edit#slide=id.g26d86d3325_0_0
+
+* https://github.com/manfredsteyer/ngx-build-plus
+
+* https://docs.google.com/presentation/d/1jiXHYwfe1iSUiVLdKLFhSPRHLI_FmIvrI60QTpP6KLk/edit#slide=id.g26d86d3325_0_0

@@ -1,0 +1,54 @@
+<mat-card class="list" *ngIf="!details && !loading">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let user of users; trackBy: user?.id" (click)="details = user">
+      <img matListAvatar
+           [src]="'https://ui-avatars.com/api/?background=0D8ABC&color=fff&name='+ user?.name.replace(' ', '+')">
+      <h3 matLine>{{user?.name}}</h3>
+      <p matLine>
+        <span>{{user?.company.name}}</span>
+      </p>
+    </mat-list-item>
+  </mat-nav-list>
+</mat-card>
+
+<mat-card *ngIf="details" class="user-details">
+  <mat-card-header>
+    <img mat-card-avatar [src]="'https://ui-avatars.com/api/?background=0D8ABC&color=fff&name='+ details?.name.replace(' ', '+')">
+    {{details?.name}}
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <mat-list style="margin: 0 -16px 0;">
+      <mat-list-item >
+        <mat-icon mat-list-icon>mail</mat-icon>
+        <h4 mat-line>{{details.email}}</h4>
+      </mat-list-item>
+      <mat-list-item >
+        <mat-icon mat-list-icon>phone</mat-icon>
+        <h4 mat-line>{{details.phone}}</h4>
+      </mat-list-item>
+      <mat-list-item >
+        <mat-icon mat-list-icon>public</mat-icon>
+        <a class="md md-accent" href="{{details.website}}" mat-line>{{details.website}}</a>
+      </mat-list-item>
+      <mat-list-item >
+        <mat-icon mat-list-icon>domain</mat-icon>
+        <h4 mat-line>{{details.company.name}}</h4>
+      </mat-list-item>
+
+      <mat-list-item >
+        <mat-icon mat-list-icon>location_on</mat-icon>
+        <h4 mat-line>{{details.address.suite}} {{details.address.street}} {{details.address.city}} {{details.address.zipcode}}</h4>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="details=null">
+      <mat-icon style="margin-right: 8px">keyboard_backspace</mat-icon>BACK
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="loading" class="loading">
+  <mat-spinner></mat-spinner>
+</mat-card>

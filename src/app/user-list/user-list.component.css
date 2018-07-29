@@ -1,0 +1,31 @@
+user-list .mat-card.list {
+  width: 400px;
+  padding: 0;
+}
+
+user-list .mat-card.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+user-list .mat-nav-list {
+  padding: 0;
+}
+
+user-list .mat-card.user-details {
+  padding: 16px;
+  width: 364px;
+}
+user-list .mat-card.user-details .mat-card-actions {
+  margin: 0 -8px -8px;
+}
+user-list .mat-card.user-details .mat-card-header {
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+user-list a {
+  text-decoration: none;
+  color: #3f51b5;
+}

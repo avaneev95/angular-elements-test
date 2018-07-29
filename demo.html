@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The User List Widget with Angular Elements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <style>
+    body, html {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden
+    }
+    .container {
+      flex-direction: row;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+    }
+    h2 {
+      display: block;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+<h2>This Widget is build with Angular Elements!</h2>
+<div class="container">
+  <user-list></user-list>
+</div>
+
+<script src="./user-list-widget.js"></script>
+</body>
+</html>
